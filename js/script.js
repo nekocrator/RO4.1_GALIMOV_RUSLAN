@@ -12,12 +12,10 @@ document.querySelectorAll(".character-card").forEach(card => {
         const key = card.dataset.character;
         const infoBlock = card.querySelector(".character-info");
 
-        // если уже открыто — закрыть
         if (card.classList.contains("active")) {
             card.classList.remove("active");
             infoBlock.textContent = "";
         } else {
-            // закрываем другие карточки
             document.querySelectorAll(".character-card").forEach(c => {
                 c.classList.remove("active");
                 c.querySelector(".character-info").textContent = "";
